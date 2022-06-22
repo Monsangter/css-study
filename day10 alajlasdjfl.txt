@@ -1,0 +1,414 @@
+The font-style property is mostly used to specify italic text.
+
+This property has three values:
+
+normal - The text is shown normally
+italic - The text is shown in italics
+oblique - The text is "leaning" (oblique is very similar to italic, but less supported)
+
+Font Variant
+The font-variant property specifies whether or not a text should be displayed in a small-caps font.
+
+In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than the original uppercase letters in the text.
+
+Font Size
+The font-size property sets the size of the text.
+
+Being able to manage the text size is important in web design. However, you should not use font size adjustments to make paragraphs look like headings, or headings look like paragraphs.
+
+Always use the proper HTML tags, like <h1> - <h6> for headings and <p> for paragraphs.
+
+The font-size value can be an absolute, or relative size.
+
+Absolute size:
+
+Sets the text to a specified size
+Does not allow a user to change the text size in all browsers (bad for accessibility reasons)
+Absolute size is useful when the physical size of the output is known
+Relative size:
+
+Sets the size relative to surrounding elements
+Allows a user to change the text size in browsers
+
+Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
+
+If you do not want to use any of the standard fonts in HTML, you can use Google Fonts.
+
+Google Fonts are free to use, and have more than 1000 fonts to choose from.
+
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+<style>
+body {
+  font-family: "Trirong", serif;
+}
+</style>
+</head>
+
+Note: When specifying a font in CSS, always list at minimum one fallback font (to avoid unexpected behaviors). So, also here you should add a generic font family (like serif or sans-serif) to the end of the list.
+
+Enabling Font Effects
+Google have also enabled different font effects that you can use.
+
+First add effect=effectname to the Google API, then add a special class name to the element that is going to use the special effect. The class name always starts with font-effect- and ends with the effectname.
+
+Example
+Add the fire effect to the "Sofia" font:
+
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1 class="font-effect-fire">Sofia on Fire</h1>
+
+</body>
+Result:
+
+Sofia on Fire
+Try it Yourself »
+To request multiple font effects, just separate the effect names with a pipe character (|), like this:
+
+3. Contrast is King
+Two fonts that are too similar will often conflict. However, contrasts, done the right way, brings out the best in each font.
+
+Example: Combining serif with sans serif is a well known combination.
+
+A strong superfamily includes both serif and sans serif variations of the same font (e.g. Lucida and Lucida Sans).
+
+2. Use Font Superfamilies
+A font superfamily is a set of fonts designed to work well together. So, using different fonts within the same superfamily is safe.
+
+For example, the Lucida superfamily contains the following fonts: Lucida Sans, Lucida Serif, Lucida Typewriter Sans, Lucida Typewriter Serif and Lucida Math.
+
+1. Complement
+It is always safe to find font pairings that complement one another.
+
+A great font combination should harmonize, without being too similar or too different.
+
+4. Choose Only One Boss
+One font should be the boss. This establishes a hierarchy for the fonts on your page. This can be achieved by varying the size, weight and color.
+
+No doubt "Georgia" is the boss here:
+
+body {
+  background-color: black;
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  color: gray; 
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: 60px;
+  color: white;
+}
+
+Georgia and Verdana
+Georgia and Verdana is a classic combination. It also sticks to the web safe font standards:
+
+Example
+Use the "Georgia" font for headings, and "Verdana" for text:
+
+Beautiful Norway
+Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.
+
+Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.
+
+Try it Yourself »
+Helvetica and Garamond
+Helvetica and Garamond is another classic combination that uses web safe fonts:
+
+Example
+Use the "Helvetica" font for headings, and "Garamond" for text:
+
+Beautiful Norway
+Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.
+
+Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.
+
+Try it Yourself »
+Popular Google Font Pairings
+If you do not want to use standard fonts in HTML, you can use Google Fonts.
+
+Google Fonts are free to use, and have more than 1000 fonts to choose from.
+
+Below are some popular Google Web Font Pairings.
+
+To shorten the code, it is also possible to specify all the individual font properties in one property.
+
+The font property is a shorthand property for:
+
+font-style
+font-variant
+font-weight
+font-size/line-height
+font-family
+Note: The font-size and font-family values are required. If one of the other values is missing, their default value are used.
+
+Example
+Use font to set several font properties in one declaration:
+
+p.a {
+  font: 20px Arial, sans-serif;
+}
+
+p.b {
+  font: italic small-caps bold 12px/30px Georgia, serif;
+}
+
+How To Add Icons
+The simplest way to add an icon to your HTML page, is with an icon library, such as Font Awesome.
+
+Add the name of the specified icon class to any inline HTML element (like <i> or <span>).
+
+All the icons in the icon libraries below, are scalable vectors that can be customized with CSS (size, color, shadow, etc.)
+
+Font Awesome Icons
+To use the Font Awesome icons, go to fontawesome.com, sign in, and get a code to add in the <head> section of your HTML page:
+
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+Read more about how to get started with Font Awesome in our Font Awesome 5 tutorial.
+
+Note: No downloading or installation is required!
+
+Bootstrap Icons
+To use the Bootstrap glyphicons, add the following line inside the <head> section of your HTML page:
+
+Google Icons
+To use the Google icons, add the following line inside the <head> section of your HTML page:
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+Note: No downloading or installation is required!
+
+a:link - a normal, unvisited link
+a:visited - a link the user has visited
+a:hover - a link when the user mouses over it
+a:active - a link the moment it is clicked
+
+When setting the style for several link states, there are some order rules:
+
+a:hover MUST come after a:link and a:visited
+a:active MUST come after a:hover
+
+Text Decoration
+The text-decoration property is mostly used to remove underlines from links:
+
+Example
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+Try it Yourself »
+Background Color
+The background-color property can be used to specify a background color for links:
+
+Example
+a:link {
+  background-color: yellow;
+}
+
+a:visited {
+  background-color: cyan;
+}
+
+a:hover {
+  background-color: lightgreen;
+}
+
+a:active {
+  background-color: hotpink;
+} 
+Try it Yourself »
+Link Buttons
+This example demonstrates a more advanced example where we combine several CSS properties to display links as boxes/buttons:
+
+More Examples
+Example
+This example demonstrates how to add other styles to hyperlinks:
+
+a.one:link {color: #ff0000;}
+a.one:visited {color: #0000ff;}
+a.one:hover {color: #ffcc00;}
+
+a.two:link {color: #ff0000;}
+a.two:visited {color: #0000ff;}
+a.two:hover {font-size: 150%;}
+
+a.three:link {color: #ff0000;}
+a.three:visited {color: #0000ff;}
+a.three:hover {background: #66ff66;}
+
+a.four:link {color: #ff0000;}
+a.four:visited {color: #0000ff;}
+a.four:hover {font-family: monospace;}
+
+a.five:link {color: #ff0000; text-decoration: none;}
+a.five:visited {color: #0000ff; text-decoration: none;}
+a.five:hover {text-decoration: underline;}
+Try it Yourself »
+Example
+Another example of how to create link boxes/buttons:
+
+a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: green;
+  color: white;
+}
+Try it Yourself »
+Example
+This example demonstrates the different types of cursors (can be useful for links):
+
+<span style="cursor: auto">auto</span><br>
+<span style="cursor: crosshair">crosshair</span><br>
+<span style="cursor: default">default</span><br>
+<span style="cursor: e-resize">e-resize</span><br>
+<span style="cursor: help">help</span><br>
+<span style="cursor: move">move</span><br>
+<span style="cursor: n-resize">n-resize</span><br>
+<span style="cursor: ne-resize">ne-resize</span><br>
+<span style="cursor: nw-resize">nw-resize</span><br>
+<span style="cursor: pointer">pointer</span><br>
+<span style="cursor: progress">progress</span><br>
+<span style="cursor: s-resize">s-resize</span><br>
+<span style="cursor: se-resize">se-resize</span><br>
+<span style="cursor: sw-resize">sw-resize</span><br>
+<span style="cursor: text">text</span><br>
+<span style="cursor: w-resize">w-resize</span><br>
+<span style="cursor: wait">wait</span>
+Try it Yourself »
+
+Position The List Item Markers
+The list-style-position property specifies the position of the list-item markers (bullet points).
+
+"list-style-position: outside;" means that the bullet points will be outside the list item. The start of each line of a list item will be aligned vertically. This is default:
+
+Coffee - A brewed drink prepared from roasted coffee beans...
+Tea
+Coca-cola
+"list-style-position: inside;" means that the bullet points will be inside the list item. As it is part of the list item, it will be part of the text and push the text at the start:
+
+Coffee - A brewed drink prepared from roasted coffee beans...
+Tea
+Coca-cola
+Example
+ul.a {
+  list-style-position: outside;
+}
+
+ul.b {
+  list-style-position: inside;
+
+Remove Default Settings
+The list-style-type:none property can also be used to remove the markers/bullets. Note that the list also has default margin and padding. To remove this, add margin:0 and padding:0 to <ul> or <ol>:
+
+Example
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+List - Shorthand property
+The list-style property is a shorthand property. It is used to set all the list properties in one declaration:
+
+Example
+ul {
+  list-style: square inside url("sqpurple.gif");
+}
+Try it Yourself »
+When using the shorthand property, the order of the property values are:
+
+list-style-type (if a list-style-image is specified, the value of this property will be displayed if the image for some reason cannot be displayed)
+list-style-position (specifies whether the list-item markers should appear inside or outside the content flow)
+list-style-image (specifies an image as the list item marker)
+If one of the property values above are missing, the default value for the missing property will be inserted, if any.
+
+Table Width and Height
+The width and height of a table are defined by the width and height properties.
+
+The example below sets the width of the table to 100%, and the height of the <th> elements to 70px:
+
+Firstname	Lastname	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+
+SS Table Style
+❮ PreviousNext ❯
+Table Padding
+To control the space between the border and the content in a table, use the padding property on <td> and <th> elements:
+
+First Name	Last Name	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+Example
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+Try it Yourself »
+Horizontal Dividers
+First Name	Last Name	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+Add the border-bottom property to <th> and <td> for horizontal dividers:
+
+Striped Tables
+First Name	Last Name	Savings
+Peter	Griffin	$100
+Lois	Griffin	$150
+Joe	Swanson	$300
+For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
+
+Example
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+Responsive Table
+A responsive table will display a horizontal scroll bar if the screen is too small to display the full content:
+
+First Name	Last Name	Points	Points	Points	Points	Points	Points	Points	Points	Points	Points	Points	Points
+Jill	Smith	50	50	50	50	50	50	50	50	50	50	50	50
+Eve	Jackson	94	94	94	94	94	94	94	94	94	94	94	94
+Adam	Johnson	67	67	67	67	67	67	67	67	67	67	67	67
+Add a container element (like <div>) with overflow-x:auto around the <table> element to make it responsive:
+
+CSS Layout - The display Property
+❮ PreviousNext ❯
+The display property is the most important CSS property for controlling layout.
+
+The display Property
+The display property specifies if/how an element is displayed.
+
+Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.
+
