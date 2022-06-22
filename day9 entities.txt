@@ -1,0 +1,1140 @@
+Chap Html entities
+
+If you use the less than (<) or greater than (>) signs in your text, the browser might mix them with tags.
+
+A character entity looks like this:
+
+&entity_name;
+OR
+
+&#entity_number;
+
+non-breaking space
+
+If you write 10 spaces in your text, the browser will remove 9 of them. To add real spaces to your text, you can use the &nbsp; character entity.
+
+Some Useful HTML Character Entities
+Result	Description	Entity Name	Entity Number	Try it
+non-breaking space	&nbsp;	&#160;	Try it »
+<	less than	&lt;	&#60;	Try it »
+>	greater than	&gt;	&#62;	Try it »
+&	ampersand	&amp;	&#38;	Try it »
+"	double quotation mark	&quot;	&#34;	Try it »
+'	single quotation mark (apostrophe)	&apos;	&#39;	Try it »
+¢	cent	&cent;	&#162;	Try it »
+£	pound	&pound;	&#163;	Try it »
+¥	yen	&yen;	&#165;	Try it »
+€	euro	&euro;	&#8364;	Try it »
+©	copyright	&copy;	&#169;	Try it »
+®	registered trademark	&reg;	&#174;	Try it »
+
+
+Combining Diacritical Marks
+A diacritical mark is a "glyph" added to a letter.
+
+Some diacritical marks, like grave (  ̀) and acute (  ́) are called accents.
+Mark	Character	Construct	Result	Try it
+ ̀	a	a&#768;	à	Try it »
+ ́	a	a&#769;	á	Try it »
+̂	a	a&#770;	â	Try it »
+ ̃	a	a&#771;	ã	Try it »
+ ̀	O	O&#768;	Ò	Try it »
+ ́	O	O&#769;	Ó	Try it »
+̂	O	O&#770;	Ô	Try it »
+ ̃	O	O&#771;	Õ	Try it »
+
+Chap symbols
+
+Symbols that are not present on your keyboard can also be added by using entities.
+
+Some Mathematical Symbols Supported by HTML
+Char	Number	Entity	Description	Try it
+∀	&#8704;	&forall;	FOR ALL	Try it »
+∂	&#8706;	&part;	PARTIAL DIFFERENTIAL	Try it »
+∃	&#8707;	&exist;	THERE EXISTS	Try it »
+∅	&#8709;	&empty;	EMPTY SETS	Try it »
+∇	&#8711;	&nabla;	NABLA	Try it »
+∈	&#8712;	&isin;	ELEMENT OF	Try it »
+∉	&#8713;	&notin;	NOT AN ELEMENT OF	Try it »
+∋	&#8715;	&ni;	CONTAINS AS MEMBER	Try it »
+∏	&#8719;	&prod;	N-ARY PRODUCT	Try it »
+∑	&#8721;	&sum;	N-ARY SUMMATION	Try it »
+
+Some Greek Letters Supported by HTML
+Char	Number	Entity	Description	Try it
+Α	&#913;	&Alpha;	GREEK CAPITAL LETTER ALPHA	Try it »
+Β	&#914;	&Beta;	GREEK CAPITAL LETTER BETA	Try it »
+Γ	&#915;	&Gamma;	GREEK CAPITAL LETTER GAMMA	Try it »
+Δ	&#916;	&Delta;	GREEK CAPITAL LETTER DELTA	Try it »
+Ε	&#917;	&Epsilon;	GREEK CAPITAL LETTER EPSILON	Try it »
+Ζ	&#918;	&Zeta;	
+Some Other Entities Supported by HTML
+Char	Number	Entity	Description	Try it
+©	&#169;	&copy;	COPYRIGHT SIGN	Try it »
+®	&#174;	&reg;	REGISTERED SIGN	Try it »
+€	&#8364;	&euro;	EURO SIGN	Try it »
+™	&#8482;	&trade;	TRADEMARK	Try it »
+←	&#8592;	&larr;	LEFTWARDS ARROW	Try it »
+↑	&#8593;	&uarr;	UPWARDS ARROW	Try it »
+→	&#8594;	&rarr;	RIGHTWARDS ARROW	Try it »
+↓	&#8595;	&darr;	DOWNWARDS ARROW	Try it »
+♠	&#9824;	&spades;	BLACK SPADE SUIT	Try it »
+♣	&#9827;	&clubs;	BLACK CLUB SUIT	Try it »
+♥	&#9829;	&hearts;	BLACK HEART SUIT	Try it »
+♦	&#9830;	&diams;	BLACK DIAMOND SUIT
+
+What are Emojis?
+Emojis look like images, or icons, but they are not.
+
+They are letters (characters) from the UTF-8 (Unicode) character set.
+
+UTF-8 covers almost all of the characters and symbols in the world.
+
+HTML Encoding (Character Sets)
+
+From ASCII to UTF-8
+ASCII was the first character encoding standard. ASCII defined 128 different characters that could be used on the internet: numbers (0-9), English letters (A-Z), and some special characters like ! $ + - ( ) @ < > .
+
+ISO-8859-1 was the default character set for HTML 4. This character set supported 256 different character codes. HTML 4 also supported UTF-8.
+
+ANSI (Windows-1252) was the original Windows character set. ANSI is identical to ISO-8859-1, except that ANSI has 32 extra characters.
+
+The HTML5 specification encourages web developers to use the UTF-8 character set, which covers almost all of the characters and symbols in the world!
+
+The HTML charset Attribute
+To display an HTML page correctly, a web browser must know the character set used in the page.
+
+This is specified in the <meta> tag:
+
+HTML Uniform Resource Locators
+
+A URL can be composed of words (e.g. w3schools.com), or an Internet Protocol (IP) address (e.g. 192.68.20.50).
+
+scheme://prefix.domain:port/path/filename
+
+Explanation:
+
+scheme - defines the type of Internet service (most common is http or https)
+prefix - defines a domain prefix (default for http is www)
+domain - defines the Internet domain name (like w3schools.com)
+port - defines the port number at the host (default for http is 80)
+path - defines a path at the server (If omitted: the root directory of the site)
+filename - defines the name of a document or resource
+
+Common URL Schemes
+The table below lists some common schemes:
+
+Scheme	Short for	Used for
+http	HyperText Transfer Protocol	Common web pages. Not encrypted
+https	Secure HyperText Transfer Protocol	Secure web pages. Encrypted
+ftp	File Transfer Protocol	Downloading or uploading files
+file	 	A file on your computer
+
+URL Encoding
+URLs can only be sent over the Internet using the ASCII character-set. If a URL contains characters outside the ASCII set, the URL has to be converted.
+
+URL encoding converts non-ASCII characters into a format that can be transmitted over the Internet.
+
+URL encoding replaces non-ASCII characters with a "%" followed by hexadecimal digits.
+
+URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign, or %20.
+
+Chap HTML Versus XHTML
+
+Why XHTML?
+XML is a markup language where all documents must be marked up correctly (be "well-formed").
+
+XHTML was developed to make HTML more extensible and flexible to work with other data formats (such as XML). In addition, browsers ignore errors in HTML pages, and try to display the website even if it has some errors in the markup. So XHTML comes with a much stricter error handling.
+
+If you want to study XML, please read our XML Tutorial.
+
+The Most Important Differences from HTML
+<!DOCTYPE> is mandatory
+The xmlns attribute in <html> is mandatory
+<html>, <head>, <title>, and <body> are mandatory
+Elements must always be properly nested
+Elements must always be closed
+Elements must always be in lowercase
+Attribute names must always be in lowercase
+Attribute values must always be quoted
+Attribute minimization is forbidden
+
+The HTML <input> element is the most used form element.
+
+An <input> element can be displayed in many ways, depending on the type attribute.
+
+HTML Forms
+
+Here are some examples:
+
+Type	Description
+<input type="text">	Displays a single-line text input field
+<input type="radio">	Displays a radio button (for selecting one of many choices)
+<input type="checkbox">	Displays a checkbox (for selecting zero or more of many choices)
+<input type="submit">	Displays a submit button (for submitting the form)
+<input type="button">	Displays a clickable button
+All the different input types are covered in this chapter: HTML Input Types.
+
+Text Fields
+The <input type="text"> defines a single-line input field for text input.
+
+The <label> Element
+Notice the use of the <label> element in the example above.
+
+The <label> tag defines a label for many form elements.
+
+The <label> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.
+
+The <label> element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the <label> element, it toggles the radio button/checkbox.
+
+The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together.
+
+The Name Attribute for <input>
+Notice that each input field must have a name attribute to be submitted.
+
+If the name attribute is omitted, the value of the input field will not be sent at all.
+
+Chap from attributes.
+
+The Action Attribute
+The action attribute defines the action to be performed when the form is submitted.
+
+Usually, the form data is sent to a file on the server when the user clicks on the submit button.
+The Target Attribute
+The target attribute specifies where to display the response that is received after submitting the form.
+
+The target attribute can have one of the following values:
+
+Value	Description
+_blank	The response is displayed in a new window or tab
+_self	The response is displayed in the current window
+_parent	The response is displayed in the parent frame
+_top	The response is displayed in the full body of the window
+framename	The response is displayed in a named iframe
+The default value is _self which means that the response will open in the current window.
+
+The Method Attribute
+The method attribute specifies the HTTP method to be used when submitting the form data.
+
+The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").
+
+The default HTTP method when submitting form data is GET. 
+
+Notes on GET:
+
+Appends the form data to the URL, in name/value pairs
+NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!)
+The length of a URL is limited (2048 characters)
+Useful for form submissions where a user wants to bookmark the result
+GET is good for non-secure data, like query strings in Google
+Notes on POST:
+
+Appends the form data inside the body of the HTTP request (the submitted form data is not shown in the URL)
+POST has no size limitations, and can be used to send large amounts of data.
+Form submissions with POST cannot be bookmarked
+Notes on GET:
+
+Appends the form data to the URL, in name/value pairs
+NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!)
+The length of a URL is limited (2048 characters)
+Useful for form submissions where a user wants to bookmark the result
+GET is good for non-secure data, like query strings in Google
+Notes on POST:
+
+Appends the form data inside the body of the HTTP request (the submitted form data is not shown in the URL)
+POST has no size limitations, and can be used to send large amounts of data.
+Form submissions with POST cannot be bookmarked
+Tip: Always use POST if the form data contains sensitive or personal information!
+
+The Autocomplete Attribute
+The autocomplete attribute specifies whether a form should have autocomplete on or off.
+
+When autocomplete is on, the browser automatically complete values based on values that the user has entered before.
+
+should not be validated when submitted.
+유훃성 검사를 안한다
+
+The <label> Element
+The <label> element defines a label for several form elements.
+
+The <label> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.
+
+The <label> element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the <label> element, it toggles the radio button/checkbox.
+
+The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together.
+
+The <option> elements defines an option that can be selected.
+
+By default, the first item in the drop-down list is selected.
+
+To define a pre-selected option, add the selected attribute to the option:
+
+The <textarea> element defines a multi-line input field (a text area):
+
+<textarea name="message" style="width:200px; height:600px;">
+The cat was playing in the garden.
+</textarea>
+
+The <button> Element
+The <button> element defines a clickable button:
+
+Example
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+Try it Yourself »
+This is how the HTML code above will be displayed in a browser:
+
+Click Me! 
+Note: Always specify the type attribute for the button element. Different browsers may use different default types for the button element.
+
+The <fieldset> and <legend> Elements
+The <fieldset> element is used to group related data in a form.
+
+The <legend> element defines a caption for the <fieldset> element.
+
+The <datalist> Element
+The <datalist> element specifies a list of pre-defined options for an <input> element.
+
+Users will see a drop-down list of the pre-defined options as they input data.
+
+The list attribute of the <input> element, must refer to the id attribute of the <datalist> element.
+
+The value Attribute
+The input value attribute specifies an initial value for an input field:
+The disabled Attribute
+The input disabled attribute specifies that an input field should be disabled.
+
+A disabled input field is unusable and un-clickable.
+
+The value of a disabled input field will not be sent when submitting the form!
+
+Unclickable 하지 않은데?
+
+The size Attribute
+The input size attribute specifies the visible width, in characters, of an input field.
+
+The default value for size is 20.
+
+Note: The size attribute works with the following input types: text, search, tel, url, email, and password.
+
+The formaction Attribute
+The input formaction attribute specifies the URL of the file that will process the input when the form is submitted.
+
+Note: This attribute overrides the action attribute of the <form> element.
+
+The formaction attribute works with the following input types: submit and image.
+
+What is HTML Canvas?
+The HTML <canvas> element is used to draw graphics, on the fly, via JavaScript.
+
+The <canvas> element is only a container for graphics. You must use JavaScript to actually draw the graphics.
+
+Canvas has several methods for drawing paths, boxes, circles, text, and adding images.
+Canvas Examples
+A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.
+
+The markup looks like this:
+
+<canvas id="myCanvas" width="200" height="100"></canvas>
+Note: Always specify an id attribute (to be referred to in a script), and a width and height attribute to define the size of the canvas. To add a border, use the style attribute.
+
+Here is an example of a basic, empty canvas:
+
+Add a JavaScript
+After creating the rectangular canvas area, you must add a JavaScript to do the drawing.
+
+Here are some examples:
+
+Draw a Line
+
+Chap html multimedia
+
+What is Multimedia?
+Multimedia comes in many different formats. It can be almost anything you can hear or see, like images, music, sound, videos, records, films, animations, and more.
+
+Web pages often contain multimedia elements of different types and formats.
+
+Browser Support
+The first web browsers had support for text only, limited to a single font in a single color.
+
+Later came browsers with support for colors, fonts, images, and multimedia!
+
+Multimedia Formats
+Multimedia elements (like audio or video) are stored in media files.
+
+The most common way to discover the type of a file, is to look at the file extension.
+
+Multimedia files have formats and different extensions like: .wav, .mp3, .mp4, .mpg, .wmv, and .avi.
+MPEG	.mpg
+.mpeg	MPEG. Developed by the Moving Pictures Expert Group. The first popular video format on the web. Not supported anymore in HTML.
+
+AVI	.avi	AVI (Audio Video Interleave). Developed by Microsoft. Commonly used in video cameras and TV hardware. Plays well on Windows computers, but not in web browsers.
+
+WMV	.wmv	WMV (Windows Media Video). Developed by Microsoft. Commonly used in video cameras and TV hardware. Plays well on Windows computers, but not in web browsers.
+
+Flash	.swf
+.flv	Flash. Developed by Macromedia. Often requires an extra component (plug-in) to play in web browsers.
+
+Ogg	.ogg	Theora Ogg. Developed by the Xiph.Org Foundation. Supported by HTML
+
+WebM	.webm	WebM. Developed by Mozilla, Opera, Adobe, and Google. Supported by HTML.
+
+MPEG-4
+or MP4	.mp4	MP4. Developed by the Moving Pictures Expert Group. Commonly used in video cameras and TV hardware. Supported by all browsers and  recommended by YouTube
+
+synonymous 동의어.
+
+The HTML <video> Element
+To show a video in HTML, use the <video> element:
+
+Example
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+
+might flicker
+깜빡거리다 스치다 실룩거림
+
+To start a video automatically, use the autoplay attribute:
+
+Add muted after autoplay to let your video start playing automatically (but muted):
+The HTML <audio> Element
+To play an audio file in HTML, use the <audio> element:
+
+The HTML <audio> Element
+To play an audio file in HTML, use the <audio> element:
+
+HTML Audio Formats
+There are three supported audio formats: MP3, WAV, and OGG. The browser support for the different formats is: 
+
+Browser	MP3	WAV	OGG
+Edge/IE	YES	YES*	YES*
+Chrome	YES	YES	YES
+Firefox	YES	YES	YES
+Safari	YES	YES	NO
+Opera	YES	YES	YES
+DOM은 document object model의 약자이며, 한글로는 "문서 객체 모델"이라고 부릅니다. DOM은 객체 지향 모델로써 구조화된 문서를 표현하는 방식입니다
+
+HTML Audio - Methods, Properties, and Events
+The HTML DOM defines methods, properties, and events for the <audio> element.
+
+This allows you to load, play, and pause audios, as well as set duration and volume.
+
+There are also DOM events that can notify you when an audio begins to play, is paused, etc.
+
+For a full DOM reference, go to our HTML Audio/Video DOM Reference.
+
+HTML Plug-ins
+❮ PreviousNext ❯
+Plug-ins are computer programs that extend the standard functionality of the browser.
+
+Plug-ins
+Plug-ins were designed to be used for many different purposes:
+
+To run Java applets
+To run Microsoft ActiveX controls
+To display Flash movies
+To display maps
+To scan for viruses
+To verify a bank id
+Most browsers no longer support Java Applets and Plug-ins.
+
+ActiveX controls are no longer supported in any browsers.
+
+The support for Shockwave Flash has also been turned off in modern browsers.
+
+The <object> Element
+The <object> element is supported by all browsers.
+
+The <object> element defines an embedded object within an HTML document.
+
+It was designed to embed plug-ins (like Java applets, PDF readers, and Flash Players) in web pages, but can also be used to include HTML in HTML:
+
+Or images if you like:
+Struggling with Video Formats?
+Converting videos to different formats can be difficult and time-consuming.
+
+An easier solution is to let YouTube play the videos in your web page.
+
+YouTube Video Id
+YouTube will display an id (like tgbNymZ7vqY), when you save (or play) a video.
+
+You can use this id, and refer to your video in the HTML code.
+
+Playing a YouTube Video in HTML
+To play your video on a web page, do the following:
+
+Upload the video to YouTube
+Take a note of the video id
+Define an <iframe> element in your web page
+Let the src attribute point to the video URL
+Use the width and height attributes to specify the dimension of the player
+Add any other parameters to the URL (see below)
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+YouTube Autoplay + Mute
+You can let your video start playing automatically when a user visits the page, by adding autoplay=1 to the YouTube URL. However, automatically starting a video is annoying for your visitors!
+
+Note: Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.
+
+Add mute=1 after autoplay=1 to let your video start playing automatically (but muted).
+
+YouTube Loop
+Add loop=1 to let your video loop forever.
+
+Value 0 (default): The video will play only once.
+
+Value 1: The video will loop (forever).
+
+YouTube - Loop
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+</iframe>
+
+YouTube Controls
+Add controls=0 to not display controls in the video player.
+
+Value 0: Player controls does not display.
+
+Value 1 (default): Player controls display.
+
+YouTube - Controls
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+</iframe>
+
+Common HTML Character Sets
+The default character set in HTML5 is UTF-8.
+
+For a closer look, visit our Complete HTML Character Set Reference.
+
+The HTML Document Type
+
+In HTML5, the <!DOCTYPE> declaration is simple:
+
+n older documents (HTML 4 or XHTML), the declaration is more complicated because the declaration must refer to a DTD (Document Type Definition).
+
+URL Encoding (Percent Encoding)
+URL encoding converts characters into a format that can be transmitted over the Internet.
+
+URLs can only be sent over the Internet using the ASCII character-set.
+
+Since URLs often contain characters outside the ASCII set, the URL has to be converted into a valid ASCII format.
+
+URL encoding replaces unsafe ASCII characters with a "%" followed by two hexadecimal digits.
+
+URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign or with %20.
+
+URL Encoding (Percent Encoding)
+URL encoding converts characters into a format that can be transmitted over the Internet.
+
+URLs can only be sent over the Internet using the ASCII character-set.
+
+Since URLs often contain characters outside the ASCII set, the URL has to be converted into a valid ASCII format.
+
+URL encoding replaces unsafe ASCII characters with a "%" followed by two hexadecimal digits.
+
+URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign or with %20
+Try It Yourself
+If you click the "Submit" button below, the browser will URL encode the input before it is sent to the server. A page at the server will display the received input.
+
+ 
+Try some other input and click Submit again.
+
+URL Encoding Functions
+In JavaScript, PHP, and ASP there are functions that can be used to URL encode a string.
+
+PHP has the rawurlencode() function, and ASP has the Server.URLEncode() function.
+
+In JavaScript you can use the encodeURIComponent() function.
+
+Click the "URL Encode" button to see how the JavaScript function encodes the text.
+
+
+ASCII Encoding Reference
+Your browser will encode input, according to the character-set used in your page.
+
+The default character-set in HTML5 is UTF-8.
+
+ISO Language Codes
+You should always include the lang attribute inside the <html> tag, to declare the language of the Web page. This is meant to assist search engines and browsers:
+
+In XHTML, the language is declared inside the <html> tag as follows:
+
+<html lang="en-US">
+
+When a browser requests a service from a web server, an error might occur, and the server might return an error code like "404 Not Found".
+
+HTTP Status Messages
+
+HTTP Methods
+GET
+POST
+PUT
+HEAD
+DELETE
+PATCH
+OPTIONS
+CONNECT
+TRACE
+The two most common HTTP methods are: GET and POST.
+
+The GET Method
+GET is used to request data from a specified resource.
+
+Note that the query string (name/value pairs) is sent in the URL of a GET request:
+
+/test/demo_form.php?name1=value1&name2=value2
+Some notes on GET requests:
+
+GET requests can be cached
+GET requests remain in the browser history
+GET requests can be bookmarked
+GET requests should never be used when dealing with sensitive data
+GET requests have length restrictions
+GET requests are only used to request data (not modify)
+
+The GET Method
+GET is used to request data from a specified resource.
+
+Note that the query string (name/value pairs) is sent in the URL of a GET request:
+
+/test/demo_form.php?name1=value1&name2=value2
+Some notes on GET requests:
+
+GET requests can be cached
+GET requests remain in the browser history
+GET requests can be bookmarked
+GET requests should never be used when dealing with sensitive data
+GET requests have length restrictions
+GET requests are only used to request data (not modify)
+
+GET	POST
+BACK button/Reload	Harmless	Data will be re-submitted (the browser should alert the user that the data are about to be re-submitted)
+Bookmarked	Can be bookmarked	Cannot be bookmarked
+Cached	Can be cached	Not cached
+Encoding type	application/x-www-form-urlencoded	application/x-www-form-urlencoded or multipart/form-data. Use multipart encoding for binary data
+History	Parameters remain in browser history	Parameters are not saved in browser history
+Restrictions on data length	Yes, when sending data, the GET method adds the data to the URL; and the length of a URL is limited (maximum URL length is 2048 characters)	No restrictions
+Restrictions on data type	Only ASCII characters allowed	No restrictions. Binary data is also allowed
+Security	GET is less secure compared to POST because data sent is part of the URL
+
+Never use GET when sending passwords or other sensitive information!	POST is a little safer than GET because the parameters are not stored in browser history or in web server logs
+Visibility	Data is visible to everyone in the URL	Data is not displayed in the URL
+
+
+The PUT Method
+PUT is used to send data to a server to create/update a resource.
+
+The difference between POST and PUT is that PUT requests are idempotent. That is, calling the same PUT request multiple times will always produce the same result. In contrast, calling a POST request repeatedly have side effects of creating the same resource multiple times.
+
+
+The DELETE Method
+The DELETE method deletes the specified resource.
+
+The PATCH Method
+The PATCH method is used to apply partial modifications to a resource.
+
+The OPTIONS Method
+The OPTIONS method describes the communication options for the target resource.
+
+The CONNECT Method
+The CONNECT method is used to start a two-way communications (a tunnel) with the requested resource.
+
+The TRACE Method
+The TRACE method method is used to perform a message loop-back test that tests the path for the target resource (useful for debugging purposes
+
+16px equal to 1em.
+
+CSS is the language we use to style a Web page.
+
+What is CSS?
+CSS stands for Cascading Style Sheets
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+CSS saves a lot of work. It can control the layout of multiple web pages all at once
+External stylesheets are stored in CSS files
+
+
+Cascade
+
+작은 폭포, 폭포처럼 흐르다, 풍성하게 늘어지다.
+
+When tags like <font>, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.
+
+To solve this problem, the World Wide Web Consortium (W3C) created CSS.
+
+CSS removed the style formatting from the HTML page!
+
+CSS Saves a Lot of Work!
+The style definitions are normally saved in external .css files.
+
+With an external stylesheet file, you can change the look of an entire website by changing just one file!
+
+xample Explained
+
+p is a selector in CSS (it points to the HTML element you want to style: <p>).
+color is a property, and red is the property value
+text-align is a property, and center is the property value
+
+CSS Selectors
+CSS selectors are used to "find" (or select) the HTML elements you want to style.
+
+We can divide CSS selectors into five categories:
+
+Simple selectors (select elements based on name, id, class)
+Combinator selectors (select elements based on a specific relationship between them)
+Pseudo-class selectors (select elements based on a certain state)
+Pseudo-elements selectors (select and style a part of an element)
+Attribute selectors (select elements based on an attribute or attribute value)
+This page will explain the most basic CSS selectors.
+
+The CSS element Selector
+The element selector selects HTML elements based on the element name.
+
+The CSS id Selector
+The id selector uses the id attribute of an HTML element to select a specific element.
+
+The id of an element is unique within a page, so the id selector is used to select one unique element!
+
+To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+
+The CSS class Selector
+The class selector selects HTML elements with a specific class attribute.
+
+To select elements with a specific class, write a period (.) character, followed by the class name.
+
+The CSS Universal Selector
+The universal selector (*) selects all HTML elements on the page.
+
+The CSS Grouping Selector
+The grouping selector selects all the HTML elements with the same style definitions.
+
+Look at the following CSS code (the h1, h2, and p elements have the same style definitions):
+
+The CSS Grouping Selector
+The grouping selector selects all the HTML elements with the same style definitions.
+
+Look at the following CSS code (the h1, h2, and p elements have the same style definitions):
+
+h1 {
+  text-align: center;
+  color: red;
+}
+
+h2 {
+  text-align: center;
+  color: red;
+}
+
+p {
+  text-align: center;
+  color: red;
+}
+It will be better to group the selectors, to minimize the code.
+
+To group selectors, separate each selector with a comma.
+
+Example
+In this example we have grouped the selectors from the code above: 
+
+h1, h2, p {
+  text-align: center;
+  color: red;
+}
+
+All CSS Simple Selectors
+Selector	Example	Example description
+#id	#firstname	Selects the element with id="firstname"
+.class	.intro	Selects all elements with class="intro"
+element.class	p.intro	Selects only <p> elements with class="intro"
+*	*	Selects all elements
+element	p	Selects all <p> elements
+element,element,..	div, p	Selects all <div> elements and all <p> elements
+
+External CSS
+With an external style sheet, you can change the look of an entire website by changing just one file!
+
+Each HTML page must include a reference to the external style sheet file inside the <link> element, inside the head section.
+
+Tip: An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.
+
+Note: Do not add a space between the property value and the unit:
+Incorrect (space): margin-left: 20 px;
+Correct (nospace): margin-left: 20px;
+
+If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used. 
+
+Cascading Order
+What style will be used when there is more than one style specified for an HTML element?
+
+All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:
+
+Inline style (inside an HTML element)
+External and internal style sheets (in the head section)
+Browser default
+So, an inline style has the highest priority, and will override external and internal styles and browser defaults.
+
+Comments are used to explain the code, and may help when you edit the source code at a later date.
+
+Comments are ignored by browsers.
+
+A CSS comment is placed inside the <style> element, and starts with /* and ends with */:
+
+From the HTML tutorial, you learned that you can add comments to your HTML source by using the <!--...--> syntax.
+
+In the following example, we use a combination of HTML and CSS comments:
+
+CSS Color Values
+In CSS, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values:
+
+Same as color name "Tomato":
+
+CSS background-attachment
+The background-attachment property specifies whether the background image should scroll or be fixed (will not scroll with the rest of the page):
+
+When using the shorthand property the order of the property values is:
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+It does not matter if one of the property values is missing, as long as the other ones are in this order. Note that we do not use the background-attachment property in the examples above, as it does not have a value.
+
+CSS background-image
+The background-image property specifies an image to use as the background of an element.
+
+By default, the image is repeated so it covers the entire element.
+
+Example
+Set the background image for a page: 
+
+body {
+  background-image: url("paper.gif");
+}
+
+body {
+  background-image: url("gradient_bg.png");
+  background-repeat: repeat-x;
+}
+
+CSS background-repeat: no-repeat
+Showing the background image only once is also specified by the background-repeat property:
+
+Example
+Show the background image only once:
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+}
+
+e background-position property is used to specify the position of the background image.
+
+Example
+Position the background image in the top-right corner: 
+
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+
+
+Demonstration of the different border widths:
+
+p.one {
+  border-style: solid;
+  border-width: 5px;
+}
+
+p.two {
+  border-style: solid;
+  border-width: medium;
+}
+
+p.three {
+  border-style: dotted;
+  border-width: 2px;
+} 
+
+p.four {
+  border-style: dotted;
+  border-width: thick;
+}
+Result:
+
+5px border-width
+
+CSS Border Color
+The border-color property is used to set the color of the four borders.
+
+The color can be set by:
+
+name - specify a color name, like "red"
+HEX - specify a HEX value, like "#ff0000"
+RGB - specify a RGB value, like "rgb(255,0,0)"
+HSL - specify a HSL value, like "hsl(0, 100%, 50%)"
+transparent
+Note: If border-color is not set, it inherits the color of the element.
+
+All the margin properties can have the following values:
+
+auto - the browser calculates the margin
+length - specifies a margin in px, pt, cm, etc.
+% - specifies a margin in % of the width of the containing element
+inherit - specifies that the margin should be inherited from the parent element
+
+If the margin property has three values:
+
+margin: 25px 50px 75px;
+top margin is 25px
+right and left margins are 50px
+bottom margin is 75px
+
+You can set the margin property to auto to horizontally center the element within its container.
+
+The element will then take up the specified width, and the remaining space will be split equally between the left and right margins.
+
+
+Property	Description
+margin	A shorthand property for setting all the margin properties in one declaration
+margin-bottom	Sets the bottom margin of an element
+margin-left	Sets the left margin of an element
+margin-right	Sets the right margin of an element
+margin-top	Sets the top margin of an element
+
+Margin Collapse
+Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
+
+This does not happen on left and right margins! Only top and bottom margins!
+
+Look at the following example:
+
+CSS Padding
+The CSS padding properties are used to generate space around an element's content, inside of any defined borders.
+
+With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).
+
+Padding and Element Width
+The CSS width property specifies the width of the element's content area. The content area is the portion inside the padding, border, and margin of an element (the box model).
+
+So, if an element has a specified width, the padding added to that element will be added to the total width of the element. This is often an undesirable result.
+
+Example
+Here, the <div> element is given a width of 300px. However, the actual width of the <div> element will be 350px (300px + 25px of left padding + 25px of right padding):
+
+To keep the width at 300px, no matter the amount of padding, you can use the box-sizing property. This causes the element to maintain its actual width; if you increase the padding, the available content space will decrease.
+
+Example
+Use the box-sizing property to keep the width at 300px, no matter the amount of padding:
+
+he CSS height and width properties are used to set the height and width of an element.
+
+The CSS max-width property is used to set the maximum width of an element.
+
+CSS Setting height and width
+The height and width properties are used to set the height and width of an element.
+
+The height and width properties do not include padding, borders, or margins. It sets the height/width of the area inside the padding, border, and margin of the element.
+
+Note: Remember that the height and width properties do not include padding, borders, or margins! They set the height/width of the area inside the padding, border, and margin of the element!
+
+Note: If you for some reason use both the width property and the max-width property on the same element, and the value of the width property is larger than the max-width property; the max-width property will be used (and the width property will be ignored).
+
+CSS Outline
+An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".
+
+e: Outline differs from borders! Unlike border, the outline is drawn outside the element's border, and may overlap other content. Also, the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline.
+
+Note: None of the other outline properties (which you will learn more about in the next chapters) will have ANY effect unless the outline-style property is set!
+
+p.ex1 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thin;
+}
+
+p.ex2 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: medium;
+}
+
+p.ex3 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thick;
+}
+
+p.ex4 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: 4px;
+}
+
+thin (typically 1px)
+medium (typically 3px)
+thick (typically 5px)
+A specific size (in px, pt, cm, em, etc)
+
+The outline-color property is used to set the color of the outline.
+
+The color can be set by:
+
+name - specify a color name, like "red"
+HEX - specify a hex value, like "#ff0000"
+RGB - specify a RGB value, like "rgb(255,0,0)"
+HSL - specify a HSL value, like "hsl(0, 100%, 50%)"
+invert - performs a color inversion (which ensures that the outline is visible, regardless of color background)
+The following example shows some different outlines with different colors. Also notice that these elements also have a thin black border inside the outline:
+
+CSS Outline - Shorthand property
+The outline property is a shorthand property for setting the following individual outline properties:
+
+outline-width
+outline-style (required)
+outline-color
+
+CSS Outline Offset
+The outline-offset property adds space between an outline and the edge/border of an element. The space between an element and its outline is transparent.
+
+The following example specifies an outline 15px outsi
+
+CSS has a lot of properties for formatting text.
+
+de the border edge:
+
+CSS Text
+
+Text Color
+The color property is used to set the color of the text. The color is specified by:
+
+a color name - like "red"
+a HEX value - like "#ff0000"
+an RGB value - like "rgb(255,0,0)"
+Look at CSS Color Values for a complete list of possible color values.
+
+The default text color for a page is defined in the body selector.
+
+en the text-align property is set to "justify", each line is stretched so that every line has equal width, and the left and right margins are straight (like in magazines and newspapers):
+
+ext Alignment
+The text-align property is used to set the horizontal alignment of a text.
+
+A text can be left or right aligned, centered, or justified.
+
+The following example shows center aligned, and left and right aligned text (left alignment is default if text direction is left-to-right, and right alignment is default if text direction is right-to-left):
+
+Text Direction
+The direction and unicode-bidi properties can be used to change the text direction of an element:
+
+dd a Decoration Line to Text
+The text-decoration-line property is used to add a decoration line to text.
+
+Tip: You can combine more than one value, like overline and underline to display lines both over and under a text.
+
+Specify a Color for the Decoration Line
+The text-decoration-color property is used to set the color of the decoration line.
+
+The text-decoration property is a shorthand property for:
+
+text-decoration-line (required)
+text-decoration-color (optional)
+text-decoration-style (optional)
+text-decoration-thickness (optional)
+
+A Small Tip
+All links in HTML are underlined by default. Sometimes you see that links are styled with no underline. The text-decoration: none; is used to remove the underline from links, like this:
+
+ext Transformation
+The text-transform property is used to specify uppercase and lowercase letters in a text.
+
+It can be used to turn everything into uppercase or lowercase letters, or capitalize the first letter of each word:
+
+Example
+p.uppercase {
+  text-transform: uppercase;
+}
+
+p.lowercase {
+  text-transform: lowercase;
+}
+
+p.capitalize {
+  text-transform: capitalize;
+}
+
+Line Height
+The line-height property is used to specify the space between lines:
+
+Word Spacing
+The word-spacing property is used to specify the space between the words in a text.
+
+The following example demonstrates how to increase or decrease the space between words:
+
+Text Shadow
+The text-shadow property adds shadow to text.
+
+In its simplest use, you only specify the horizontal shadow (2px) and the vertical shadow (2px):
+
+Text shadow effect!
+Example
+h1 {
+  text-shadow: 2px 2px;
+}Font Selection is Important
+Choosing the right font has a huge impact on how the readers experience a website.
+
+The right font can create a strong identity for your brand.
+
+Using a font that is easy to read is important. The font adds value to your text. It is also important to choose the correct color and text size for the font.
+
+The CSS font-family Property
+In CSS, we use the font-family property to specify the font of a text.
+
+Note: If the font name is more than one word, it must be in quotation marks, like: "Times New Roman".
+
+Tip: The font-family property should hold several font names as a "fallback" system, to ensure maximum compatibility between browsers/operating systems. Start with the font you want, and end with a generic family (to let the browser pick a similar font in the generic family, if no other fonts are available). The font names should be separated with comma. Read more about fallback fonts in the next chapter.
+
+However, there are no 100% completely web safe fonts. There is always a chance that a font is not found or is not installed properly.
+
+Therefore, it is very important to always use fallback fonts.
+
+This means that you should add a list of similar "backup fonts" in the font-family property. If the first font does not work, the browser will try the next one, and the next one, and so on. Always end the list with a generic font family name.
+
+Best Web Safe Fonts for HTML and CSS
+The following list are the best web safe fonts for HTML and CSS:
+
+Arial (sans-serif)
+Verdana (sans-serif)
+Helvetica (sans-serif)
+Tahoma (sans-serif)
+Trebuchet MS (sans-serif)
+Times New Roman (serif)
+Georgia (serif)
+Garamond (serif)
+Courier New (monospace)
+Brush Script MT (cursive)
+
+Commonly Used Font Fallbacks
+Below are some commonly used font fallbacks, organized by the 5 generic font families:
+
+Serif
+Sans-serif
+Monospace
+Cursive
+Fantasy
