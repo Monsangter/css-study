@@ -1,0 +1,258 @@
+The display Property
+The display property specifies if/how an element is displayed.
+
+Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.
+
+Block-level Elements
+A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
+
+The <div> element is a block-level element.
+Examples of block-level elements:
+
+<div>
+<h1> - <h6>
+<p>
+<form>
+<header>
+<footer>
+<section>
+
+Inline Elements
+An inline element does not start on a new line and only takes up as much width as necessary.
+
+This is an inline <span> element inside a paragraph.
+
+Examples of inline elements:
+
+<span>
+<a>
+<img>
+
+Display: none;
+display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them. Take a look at our last example on this page if you want to know how this can be achieved.
+
+The <script> element uses display: none; as default. 
+Override The Default Display Value
+As mentioned, every element has a default display value. However, you can override this.
+
+Changing an inline element to a block element, or vice versa, can be useful for making the page look a specific way, and still follow the web standards.
+
+A common example is making inline <li> elements for horizontal menus:
+
+Note: Setting the display property of an element only changes how the element is displayed, NOT what kind of element it is. So, an inline element with display: block; is not allowed to have other block elements inside it.
+
+The following example displays <span> elements as block elements:
+
+Hide an Element - display:none or visibility:hidden?
+display:none
+
+Italy
+Remove
+
+visibility:hidden
+
+Forest
+Hide
+
+Reset
+
+Lights
+Reset All
+
+Hiding an element can be done by setting the display property to none. The element will be hidden, and the page will be displayed as if the element is not there:
+
+Example
+h1.hidden {
+  display: none;
+}
+Try it Yourself »
+visibility:hidden; also hides an element.
+
+However, the element will still take up the same space as before. The element will be hidden, but still affect the layout:
+
+Using width, max-width and margin: auto;
+As mentioned in the previous chapter; a block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+
+Setting the width of a block-level element will prevent it from stretching out to the edges of its container. Then, you can set the margins to auto, to horizontally center the element within its container. The element will take up the specified width, and the remaining space will be split equally between the two margins:
+
+This <div> element has a width of 500px, and margin set to auto.
+
+Note: The problem with the <div> above occurs when the browser window is smaller than the width of the element. The browser then adds a horizontal scrollbar to the page.
+
+Using max-width instead, in this situation, will improve the browser's handling of small windows. This is important when making a site usable on small devices:
+
+This <div> element has a max-width of 500px, and margin set to auto.
+
+Tip: Resize the browser window to less than 500px wide, to see the difference between the two divs!
+
+Here is an example of the two divs above:
+
+Using width, max-width and margin: auto;
+As mentioned in the previous chapter; a block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+
+Setting the width of a block-level element will prevent it from stretching out to the edges of its container. Then, you can set the margins to auto, to horizontally center the element within its container. The element will take up the specified width, and the remaining space will be split equally between the two margins:
+
+This <div> element has a width of 500px, and margin set to auto.
+
+Note: The problem with the <div> above occurs when the browser window is smaller than the width of the element. The browser then adds a horizontal scrollbar to the page.
+
+Using max-width instead, in this situation, will improve the browser's handling of small windows. This is important when making a site usable on small devices:
+
+This <div> element has a max-width of 500px, and margin set to auto.
+
+Tip: Resize the browser window to less than 500px wide, to see the difference between the two divs!
+
+Here is an example of the two divs above:
+
+The position Property
+The position property specifies the type of positioning method used for an element.
+
+There are five different position values:
+
+static
+relative
+fixed
+absolute
+sticky
+Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
+
+position: static;
+HTML elements are positioned static by default.
+
+Static positioned elements are not affected by the top, bottom, left, and right properties.
+
+An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:
+
+This <div> element has position: static;
+Here is the CSS that is used:
+
+position: fixed;
+An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+
+A fixed element does not leave a gap in the page where it would normally have been located.
+
+Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used:
+
+The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
+
+The position Property
+The position property specifies the type of positioning method used for an element.
+
+There are five different position values:
+
+static
+relative
+fixed
+absolute
+sticky
+Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
+
+position: static;
+HTML elements are positioned static by default.
+
+Static positioned elements are not affected by the top, bottom, left, and right properties.
+
+An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:
+
+This <div> element has position: static;
+Here is the CSS that is used:
+
+Example
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+Try it Yourself »
+position: relative;
+An element with position: relative; is positioned relative to its normal position.
+
+Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+
+This <div> element has position: relative;
+Here is the CSS that is used:
+
+Example
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+Try it Yourself »
+ADVERTISEMENT
+
+position: fixed;
+An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+
+A fixed element does not leave a gap in the page where it would normally have been located.
+
+Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used:
+
+Example
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73AD21;
+}
+Try it Yourself »
+This <div> element has position: fixed;
+position: absolute;
+An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+
+However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+
+Note: Absolute positioned elements are removed from the normal flow, and can overlap elements.
+
+Here is a simple example:
+
+This <div> element has position: relative; This <div> element has position: absolute;
+Here is the CSS that is used:
+
+Example
+div.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73AD21;
+} 
+
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+Try it Yourself »
+position: sticky;
+An element with position: sticky; is positioned based on the user's scroll position.
+
+A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
+
+Note: Internet Explorer does not support sticky positioning. Safari requires a -webkit- prefix (see example below). You must also specify at least one of top, right, bottom or left for sticky positioning to work.
+
+In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.
+
+Example
+div.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: green;
+  border: 2px solid #4CAF50;
+}
+Try it Yourself »
+Positioning Text In an Image
+How to position text over an image:
+
+Example
+Cinque Terre Bottom Left Top Left Top Right Bottom Right Centered
+Try it Yourself:
+
+Top Left » Top Right » Bottom Left » Bottom Right » Centered »
+More Examples
+Set the shape of an element
+This example demonstrates how to set the shape of an element. The element is clipped into this shape, and displayed.
