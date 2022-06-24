@@ -1,0 +1,30 @@
+Active/Current Navigation Link
+Add an "active" class to the current link to let the user know which page he/she is on:
+
+Home
+News
+Contact
+About
+Example
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+Try it Yourself »
+Center Links & Add Borders
+Add text-align:center to <li> or <a> to center the links.
+
+Add the border property to <ul> add a border around the navbar. If you also want borders inside the navbar, add a border-bottom to all <li> elements, except for the last one:
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+√
